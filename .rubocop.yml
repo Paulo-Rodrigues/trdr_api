@@ -1,0 +1,27 @@
+require:
+  - rubocop-rails
+AllCops:
+  TargetRubyVersion: 3.0
+  SuggestExtensions: false
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'spec/spec_helper.rb'
+    - 'node_modules/**/*'
+  NewCops: enable
+
+Style/Documentation:
+    Enabled: false
+Style/FrozenStringLiteralComment:
+    Enabled: false
+Metrics/BlockLength:
+    IgnoredMethods: ['describe', 'context', 'feature', 'scenario']
+Style/ClassAndModuleChildren:
+    EnforcedStyle: compact
+Rails/FilePath:
+    Enabled: false
+Naming/FileName:
+    Enabled: false
