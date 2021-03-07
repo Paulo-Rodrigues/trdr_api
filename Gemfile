@@ -10,6 +10,9 @@ gem 'rack-cors'
 gem 'rails', '~> 6.1.3'
 gem 'redis', '~> 4.0'
 
+gem 'devise'
+gem 'devise-jwt'
+
 group :test do
   gem 'shoulda-matchers'
 end
