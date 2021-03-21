@@ -18,13 +18,13 @@ RSpec.describe User, type: :model do
     let(:invalid_user) { build_stubbed :user, :invalid }
 
     it 'is not valid without password' do
-      other_user = build(:user, password: nil)
-      expect(other_user).not_to be_valid
+      user = build(:user, password: nil)
+      expect(user).not_to be_valid
     end
 
     it 'is not valid without email' do
-      other_user = build(:user, email: nil)
-      expect(other_user).not_to be_valid
+      user = build(:user, email: nil)
+      expect(user).not_to be_valid
     end
 
     it 'is not valid with password bellow 6 characters' do
