@@ -31,4 +31,8 @@ RSpec.describe User, type: :model do
       expect(invalid_user).not_to be_valid
     end
   end
+
+  context 'associations' do
+    it { is_expected.to have_many(:posts).dependent(:destroy) }
+  end
 end
