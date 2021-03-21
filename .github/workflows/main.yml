@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.6', '2.7', '3.0']
+        ruby-version: ['3.0']
 
     services:
       postgres:
@@ -33,7 +33,7 @@ jobs:
         uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
         with:
           ruby-version: ${{ matrix.ruby-version }}
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          # bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       # - uses: ruby/setup-ruby@v1.45.0
       #   with:
