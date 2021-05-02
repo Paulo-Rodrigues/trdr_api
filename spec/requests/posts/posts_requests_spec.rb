@@ -1,6 +1,14 @@
 require 'rails_helper'
 
 describe Post, type: :request do
+  context 'list posts' do
+    it 'successfully' do
+      get '/api/v1/posts'
+
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
   context 'create a post' do
     it 'successfully' do
       user = create(:user, :valid)

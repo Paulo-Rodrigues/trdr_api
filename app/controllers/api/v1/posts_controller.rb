@@ -1,6 +1,11 @@
 module Api::V1
   class PostsController < ApplicationController
-    before_action :authorize_request
+    before_action :authorize_request, except: :index
+
+    def index
+      @posts = Post.all
+      render json: @posts, status: :ok
+    end
 
     def show
       @post = Post.find(params[:id])
